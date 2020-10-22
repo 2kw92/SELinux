@@ -71,7 +71,7 @@ curl localhost:10000
 semodule -r httpd_add
 На этом первая часть дз закончена.
 
-Для проверки второй необходимо зайти на ns01
+2. Для проверки второй необходимо зайти на ns01
 vagrant ssh ns01
 Там выполняем
 ansible-playbook /vagrant/provisioning/playbook.yml
