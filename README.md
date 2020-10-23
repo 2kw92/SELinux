@@ -85,14 +85,15 @@ server 192.168.50.10
 zone ddns.lab
 update add www.ddns.lab. 60 A 192.168.50.15
 send
-```     
+```
+
 Получим ошибку:     
 ```update failed: SERVFAIL```     
 
 Далее идем на сервер ns01 и там выполняем:     
 ```audit2allow -M named-selinux --debug  < /var/log/audit/audit.log
-semodule -i named-selinux.pp```     
-
+semodule -i named-selinux.pp
+```     
 Пробуем снова с сервера client:    
 ```nsupdate -k /etc/named.zonetransfer.key
 server 192.168.50.10
