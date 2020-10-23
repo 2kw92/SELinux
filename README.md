@@ -14,7 +14,7 @@ vagrant ssh ns01
 
 a) Переключатель setsebool
 Для этого поменяем порт на нестандартный и запсутим и nginx
-sed -i 's|listen       80 default_server;|listen       10000 default_server;|' /etc/nginx/nginx.conf
+<sed -i 's|listen       80 default_server;|listen       10000 default_server;|' /etc/nginx/nginx.conf>
 systemctl start nginx
 Что выдаст нам ошибку:
 Oct 16 14:32:01 selinux nginx[6883]: nginx: [emerg] bind() to 0.0.0.0:10000 failed (13: Permission denied)
